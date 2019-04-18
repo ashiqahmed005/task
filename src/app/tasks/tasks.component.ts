@@ -29,7 +29,7 @@ export class TasksComponent implements OnInit {
     .subscribe(
     tasks => {
       
-      const something = tasks.map((task, idx) => {
+      const dataMap = tasks.map((task, idx) => {
         task = {
             id : task.id,
             address: task.address.raw_address,
@@ -38,8 +38,8 @@ export class TasksComponent implements OnInit {
             label: (idx+1)
         }
       return task;})
-      console.log(something);
-       this.tasks = something;
+     // console.log(something);
+       this.tasks = dataMap;
       });
      }
 addTask(data){
