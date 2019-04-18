@@ -51,19 +51,6 @@ addTask (task: { category: string; address: any; }): Observable<any> {
 
 
 
-//   console.log(addero.address);
-//   let data = {
-//     task: addero.address
-//   }
-//   console.log(data);
-//  return this.http.post<any>(this._url).pipe(
-  // tap(data => console.log('All: ' + JSON.stringify(data))),
-  //  catchError(this.handleError));
-  //this.taskAdded.emit(this.getEmployees);
-  // .pipe(
-  //  // tap((newHero: Hero) => this.log(`added hero w/ id=${newHero.id}`)),
-  //   catchError(this.handleError<Hero>('addHero'))
-  // );
 }
 
 
