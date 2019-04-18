@@ -1,0 +1,38 @@
+
+
+
+<agm-map [latitude]="lat" [longitude]="lng" [zoom]="zoom" [fitBounds]="true">
+  <agm-marker 
+  [agmFitBounds]="true"
+  *ngFor="let task of tasks; let i = index"
+  
+  [latitude]="task.lat"
+  [longitude]="task.lng"
+  (markerClick)="clickedMarker(infowindow)"
+  [label]="task.label.toString()"
+  >
+  
+  <agm-info-window #infowindow>
+    <strong>{{task.address}}</strong>
+  </agm-info-window>
+
+</agm-marker>
+</agm-map>
+
+<div class="heroes">
+
+  
+  <form #taskForm="ngForm" (ngSubmit)="addTask(taskForm.value)" novalidate>
+     <!-- {{taskForm.value | json}} -->
+     
+     <input name ="category" type="hidden" [(ngModel)]="category"/>
+     <div class="form-group" ngModelGroup = "address">
+        <label for="exampleInputEmail1">Input Address</label>
+      <input class="form-control" required #address name="raw_address" type="text" [(ngModel)] ="addTaskAddress"/>
+      <small class="text-danger" *ngIf= "address.valid">Address is required</small>
+    <!-- {{address.className}} -->
+     </div>
+     <button class="btn btn-primary"type="submit" [disabled]="taskForm.form.invalid" >Submit</button>
+  </form>
+</div>
+
