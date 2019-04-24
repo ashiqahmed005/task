@@ -11,7 +11,7 @@ export class TasksComponent implements OnInit {
 
   tasks= []; 
   category = "assignment";
-  private addTaskAddress = '';
+  addTaskAddress = '';
   title: string = 'Test Project for NameSpace';
   lat: number = 59.4402061;
   lng: number = 24.730356;
