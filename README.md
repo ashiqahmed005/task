@@ -8,6 +8,7 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
  
   * git clone  
   * Run npm install
+  * put Google Map Api Key on src/app/app.module.ts
   * Run npm start 
   * create account in https://gsmtasks.com/
   * Login with created account 
