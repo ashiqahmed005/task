@@ -24,7 +24,7 @@ import { LoginComponent } from './auth/login/login.component';
     AppRoutingModule,
     HttpClientModule,
     AgmCoreModule.forRoot({
-      apiKey: 'google map api key here'
+      apiKey: 'AIzaSyD9TDCnJmk1BWh_sURnWyGP-7o9TAUQNb0'
     })
 
   ],
