@@ -4,7 +4,7 @@ import { FormsModule, ReactiveFormsModule  }    from '@angular/forms';
 import { HttpClientModule }    from '@angular/common/http';
 import { AuthGuard } from './auth/auth.guard';
 import { HeaderComponent } from './header/header.component';
-
+import {LocationStrategy, HashLocationStrategy} from '@angular/common';
 
 
 import { AppRoutingModule }     from './app-routing.module';
@@ -35,7 +35,7 @@ import { LoginComponent } from './auth/login/login.component';
     LoginComponent,
     HeaderComponent,
   ],
-  providers:[httpInterceptorProviders, AuthGuard],
+  providers:[httpInterceptorProviders, AuthGuard, {provide: LocationStrategy, useClass: HashLocationStrategy}],
   bootstrap: [ AppComponent ]
 })
 export class AppModule { }
