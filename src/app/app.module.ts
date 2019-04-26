@@ -35,7 +35,7 @@ import { LoginComponent } from './auth/login/login.component';
     LoginComponent,
     HeaderComponent,
   ],
-  providers:[httpInterceptorProviders, AuthGuard],
+  providers:[httpInterceptorProviders, AuthGuard, {provide: LocationStrategy, useClass: HashLocationStrategy}],
   bootstrap: [ AppComponent ]
 })
 export class AppModule { }
