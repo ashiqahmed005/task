@@ -2,7 +2,7 @@
 
   * Api call and data Visualization.
 
-Try without without authentication: https://namespace-test.netlify.com/
+
 
 with Authentication: https://task-namaspace.herokuapp.com 
 
